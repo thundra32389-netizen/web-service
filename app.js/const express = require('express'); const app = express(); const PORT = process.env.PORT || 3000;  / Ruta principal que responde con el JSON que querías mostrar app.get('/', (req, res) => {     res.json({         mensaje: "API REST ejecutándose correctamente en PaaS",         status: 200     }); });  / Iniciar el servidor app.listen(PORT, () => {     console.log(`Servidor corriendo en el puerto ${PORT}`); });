@@ -1,0 +1,16 @@
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Ruta principal que responde con el JSON que querías mostrar
+app.get('/', (req, res) => {
+    res.json({
+        mensaje: "API REST ejecutándose correctamente en PaaS",
+        status: 200
+    });
+});
+
+// Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
